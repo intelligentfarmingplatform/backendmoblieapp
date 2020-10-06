@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/', (req, res) => res.send('Hello World!'))
 
-app.use('/api/user', userRoute)
+app.use('/api/backend/user', userRoute)
 
 db.sequelize.sync()
     .then(() => app.listen(port, () => console.log(`Example app listening at http://localhost:${port} 👏`)))
